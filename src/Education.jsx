@@ -1,8 +1,12 @@
 export default function Education({ setSchool, setField, setDate }) {
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
   return (
     <>
       <h2>Education</h2>
-      <form action="/" method="post">
+      <form action="/" method="post" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="school">School: </label>
           <input
@@ -33,6 +37,7 @@ export default function Education({ setSchool, setField, setDate }) {
             onChange={(e) => setDate(e.target.value)}
           />
         </div>
+        <button type="submit">Add</button>
       </form>
     </>
   );
