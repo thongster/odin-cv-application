@@ -19,7 +19,7 @@ function App() {
         <General setName={setName} setEmail={setEmail} setPhone={setPhone} />
         <Education setSchool={setSchool} setField={setField} setDate={setDate}/>
         <GeneralDisplay name={name} email={email} phone={phone} />
-        <Education school={school} field={field} date={date}/>
+        <EducationDisplay school={school} field={field} date={date}/>
       </div>
     </>
   );

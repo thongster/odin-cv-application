@@ -1,6 +1,7 @@
 export default function General({ setName, setEmail, setPhone }) {
   return (
     <>
+      <h2>General</h2>
       <form action="/" method="post">
         <div className="nameDiv">
           <label htmlFor="name">Name: </label>
