@@ -1,9 +1,6 @@
 import { useState } from 'react'
 
-export default function General() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
+export default function General({onNameChange, onEmailChange, onPhoneChange}) {
 
   return (
     <>
@@ -15,8 +12,8 @@ export default function General() {
           id="name" 
           required 
           placeholder="John D. Smith" 
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+        //   value={name}
+          onChange={(e) => onNameChange(e.target.value)}
           />
         </div>
         <div className="emailDiv">
@@ -26,8 +23,8 @@ export default function General() {
             id="email"
             required
             placeholder="johndsmith@gmail.com"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            // value={email}
+            onChange={(e) => onEmailChange(e.target.value)}
           />
         </div>
         <div className="phoneDiv">
@@ -37,15 +34,15 @@ export default function General() {
             id="phone" 
             required 
             placeholder="555-555-5555" 
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
+            // value={phone}
+            onChange={(e) => onPhoneChange(e.target.value)}
           />
         </div>
       </form>
       <div>
-        <p>{name}</p>
+        {/* <p>{name}</p>
         <p>{email}</p>
-        <p>{phone}</p>
+        <p>{phone}</p> */}
       </div>
     </>
   );
