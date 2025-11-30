@@ -10,7 +10,6 @@ export default function General({ setName, setEmail, setPhone }) {
             id="name"
             required
             placeholder="John D. Smith"
-            //   value={name}
             onChange={(e) => setName(e.target.value)}
           />
         </div>
@@ -21,7 +20,6 @@ export default function General({ setName, setEmail, setPhone }) {
             id="email"
             required
             placeholder="johndsmith@gmail.com"
-            // value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
@@ -32,7 +30,6 @@ export default function General({ setName, setEmail, setPhone }) {
             id="phone"
             required
             placeholder="555-555-5555"
-            // value={phone}
             onChange={(e) => setPhone(e.target.value)}
           />
         </div>

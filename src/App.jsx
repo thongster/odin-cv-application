@@ -17,9 +17,13 @@ function App() {
     <>
       <div className="container">
         <General setName={setName} setEmail={setEmail} setPhone={setPhone} />
-        <Education setSchool={setSchool} setField={setField} setDate={setDate}/>
+        <Education
+          setSchool={setSchool}
+          setField={setField}
+          setDate={setDate}
+        />
         <GeneralDisplay name={name} email={email} phone={phone} />
-        <EducationDisplay school={school} field={field} date={date}/>
+        <EducationDisplay school={school} field={field} date={date} />
       </div>
     </>
   );
