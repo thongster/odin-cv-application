@@ -1,9 +1,10 @@
-export default function EducationDisplay({ school, field, date }) {
+export default function EducationDisplay({ educationList }) {
+
   return (
     <>
-      <p>{school}</p>
-      <p>{field}</p>
-      <p>{date}</p>
+      {educationList.map((edu) => (
+        <p>{edu}</p>
+      ))}
     </>
   );
 }

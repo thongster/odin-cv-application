@@ -1,6 +1,17 @@
-export default function Education({ setSchool, setField, setDate }) {
-  function handleSubmit(e) {
+export default function Education({ setSchool, setField, setDate, setEducationList }) {
+    
+    function handleSubmit(e) {
     e.preventDefault();
+
+    const entry = {
+        school: "",
+        field: "",
+        date: ""
+    }
+
+    setEducationList((prevList) => [...prevList, entry])
+    console.log(entry)
+    console.log(setEducationList)
   }
 
   return (

@@ -9,6 +9,7 @@ function App() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [educationList, setEducationList] = useState([])
   const [school, setSchool] = useState("");
   const [field, setField] = useState("");
   const [date, setDate] = useState("");
@@ -21,9 +22,10 @@ function App() {
           setSchool={setSchool}
           setField={setField}
           setDate={setDate}
+          setEducationList={setEducationList}
         />
         <GeneralDisplay name={name} email={email} phone={phone} />
-        <EducationDisplay school={school} field={field} date={date} />
+        {/* <EducationDisplay educationList={educationList} /> */}
       </div>
     </>
   );
