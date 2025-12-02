@@ -1,13 +1,15 @@
 import "./styles/Tabs.css";
 
-export default function Tabs({ tab, setTab }) {
-  function handleClick() {}
+export default function Tabs({ setTab }) {
+  function handleClick(state) {
+    setTab(state)
+  }
 
   return (
     <div className="tabs">
-      <button onClick={handleClick}>General</button>
-      <button onClick={handleClick}>Education</button>
-      <button onClick={handleClick}>Experience</button>
+      <button onClick={() => handleClick("General")}>General</button>
+      <button onClick={() => handleClick("Education")}>Education</button>
+      <button onClick={() => handleClick("Experience")}>Experience</button>
     </div>
   );
 }

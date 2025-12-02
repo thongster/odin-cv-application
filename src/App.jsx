@@ -26,15 +26,15 @@ function App() {
   const [endDate, setEndDate] = useState("");
   const [experienceList, setExperienceList] = useState([]);
   // Tabs states
-  const [tab, setTab] = useState(["General", "Education", "Experience"]);
+  const [tab, setTab] = useState("General");
 
   return (
     <>
       <div className="container">
         <div className="formSide">
-          <Tabs tab setTab={setTab} />
-          <General setName={setName} setEmail={setEmail} setPhone={setPhone} />
-          <Education
+          <Tabs setTab={setTab} />
+          {tab === "General" && <General setName={setName} setEmail={setEmail} setPhone={setPhone} />}
+          {tab === "Education" && <Education
             school={school}
             field={field}
             date={date}
@@ -42,8 +42,8 @@ function App() {
             setField={setField}
             setDate={setDate}
             setEducationList={setEducationList}
-          />
-          <Experience
+          />}
+          {tab === "Experience" && <Experience
             position={position}
             company={company}
             duties={duties}
@@ -55,7 +55,7 @@ function App() {
             setStartDate={setStartDate}
             setEndDate={setEndDate}
             setExperienceList={setExperienceList}
-          />
+          />}
         </div>
         <div className="resumeSide">
           <GeneralDisplay name={name} email={email} phone={phone} />
