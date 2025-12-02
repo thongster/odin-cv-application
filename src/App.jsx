@@ -23,7 +23,7 @@ function App() {
   const [duties, setDuties] = useState([]);
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
-  const [experienceList, setExperienceList] = useState("");
+  const [experienceList, setExperienceList] = useState([]);
 
   return (
     <>

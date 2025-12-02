@@ -24,6 +24,7 @@ export default function Experience({
     };
 
     setExperienceList((prevList) => [...prevList, entry]);
+    console.log(entry)
   }
 
   return (
