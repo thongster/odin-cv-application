@@ -6,7 +6,7 @@ import Education from "./components/Education";
 import EducationDisplay from "./components/EducationDisplay";
 import Experience from "./components/Experience";
 import ExperienceDisplay from "./components/ExperienceDisplay";
-import Tabs from "./Tabs"
+import Tabs from "./Tabs";
 
 function App() {
   // General info
@@ -25,12 +25,14 @@ function App() {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [experienceList, setExperienceList] = useState([]);
+  // Tabs states
+  const [tab, setTab] = useState(["General", "Education", "Experience"]);
 
   return (
     <>
       <div className="container">
         <div className="formSide">
-          <Tabs />
+          <Tabs tab setTab={setTab} />
           <General setName={setName} setEmail={setEmail} setPhone={setPhone} />
           <Education
             school={school}
