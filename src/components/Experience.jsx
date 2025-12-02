@@ -38,6 +38,7 @@ export default function Experience({
             id="position"
             required
             placeholder="Sales Consultant"
+            value={position}
             onChange={(e) => setPosition(e.target.value)}
           />
         </div>
@@ -48,6 +49,7 @@ export default function Experience({
             id="company"
             required
             placeholder="Far East Trading Company"
+            value={company}
             onChange={(e) => setCompany(e.target.value)}
           />
         </div>
@@ -57,6 +59,7 @@ export default function Experience({
             id="duties"
             required
             placeholder="Increased sales 100%"
+            value={duties}
             onChange={(e) => setDuties(e.target.value)}
           ></textarea>
         </div>
@@ -66,6 +69,7 @@ export default function Experience({
             type="date"
             id="startDate"
             required
+            value={startDate}
             onChange={(e) => setStartDate(e.target.value)}
           ></input>
         </div>
@@ -75,6 +79,7 @@ export default function Experience({
             type="date"
             id="endDate"
             required
+            value={endDate}
             onChange={(e) => setEndDate(e.target.value)}
           ></input>
         </div>
