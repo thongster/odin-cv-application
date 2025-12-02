@@ -6,6 +6,7 @@ import Education from "./components/Education";
 import EducationDisplay from "./components/EducationDisplay";
 import Experience from "./components/Experience";
 import ExperienceDisplay from "./components/ExperienceDisplay";
+import Tabs from "./Tabs"
 
 function App() {
   // General info
@@ -29,6 +30,7 @@ function App() {
     <>
       <div className="container">
         <div className="formSide">
+          <Tabs />
           <General setName={setName} setEmail={setEmail} setPhone={setPhone} />
           <Education
             school={school}
