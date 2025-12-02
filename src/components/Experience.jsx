@@ -12,6 +12,17 @@ export default function Experience({
 }) {
   function handleSubmit(e) {
     e.preventDefault()
+
+    const entry = {
+      id: crypto.randomUUID(),
+      position: position,
+      company: company,
+      duties: duties,
+      startDate: startDate,
+      endDate: endDate,
+    };
+
+    s((prevList) => [...prevList, entry]);
   }
 
   return (

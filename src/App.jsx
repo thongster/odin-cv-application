@@ -23,6 +23,7 @@ function App() {
   const [duties, setDuties] = useState([]);
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
+  const [experienceList, setExperienceList] = useState("");
 
   return (
     <>
@@ -48,10 +49,11 @@ function App() {
           setDuties={setDuties}
           setStartDate={setStartDate}
           setEndDate={setEndDate}
+          setExperienceList={setExperienceList}
         />
         <GeneralDisplay name={name} email={email} phone={phone} />
         <EducationDisplay educationList={educationList} />
-        <ExperienceDisplay />
+        <ExperienceDisplay experienceList={experienceList}/>
       </div>
     </>
   );
