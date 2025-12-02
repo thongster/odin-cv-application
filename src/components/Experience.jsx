@@ -59,6 +59,7 @@ export default function Experience({
             id="duties"
             required
             placeholder="Increased sales 100%"
+            rows="6"
             value={duties}
             onChange={(e) => setDuties(e.target.value)}
           ></textarea>
