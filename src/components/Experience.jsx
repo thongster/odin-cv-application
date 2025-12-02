@@ -9,6 +9,7 @@ export default function Experience({
   setDuties,
   setStartDate,
   setEndDate,
+  setExperienceList
 }) {
   function handleSubmit(e) {
     e.preventDefault()
@@ -22,7 +23,7 @@ export default function Experience({
       endDate: endDate,
     };
 
-    s((prevList) => [...prevList, entry]);
+    setExperienceList((prevList) => [...prevList, entry]);
   }
 
   return (
@@ -46,6 +47,33 @@ export default function Experience({
                     required
                     placeholder="Far East Trading Company"
                     onChange={(e) => setCompany(e.target.value)} />
+            </div>
+            <div>
+                <label htmlFor="duties">Responsibilities: </label>
+                <textarea
+                    id="duties"
+                    required
+                    placeholder="Increased sales 100%"
+                    onChange={(e) => setDuties(e.target.value)}>
+                </textarea>
+            </div>
+            <div>
+                <label htmlFor="startDate">Start Date: </label>
+                <input
+                    type="date"
+                    id="startDate"
+                    required
+                    onChange={(e) => setStartDate(e.target.value)}>
+                </input>
+            </div>
+            <div>
+                <label htmlFor="endDate">End Date: </label>
+                <input
+                    type="date"
+                    id="endDate"
+                    required
+                    onChange={(e) => setEndDate(e.target.value)}>
+                </input>
             </div>
         <button type="submit">Add</button>
         </form>
