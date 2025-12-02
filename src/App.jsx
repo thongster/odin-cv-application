@@ -37,7 +37,18 @@ function App() {
           setDate={setDate}
           setEducationList={setEducationList}
         />
-        <Experience />
+        <Experience 
+          position={position} 
+          company={company} 
+          duties={duties}
+          startDate={startDate}
+          endDate={endDate}
+          setPosition={setPosition}
+          setCompany={setCompany}
+          setDuties={setDuties}
+          setStartDate={setStartDate}
+          setEndDate={setEndDate} 
+        />
         <GeneralDisplay name={name} email={email} phone={phone} />
         <EducationDisplay educationList={educationList} />
         <ExperienceDisplay />
