@@ -6,10 +6,11 @@ export default function ExperienceDisplay({ experienceList }) {
         <div key={exp.id}>
           <p>{exp.position}</p>
           <p>{exp.company}</p>
-          <ul>{exp.duties.split("\n").map((duty) => {
-            return <li>{duty}</li>
-          })}</ul>
-          {console.log(exp.duties.split("\n"))}
+          <ul>
+            {exp.duties.split("\n").map((duty) => {
+              return <li key={crypto.randomUUID()}>{duty}</li>;
+            })}
+          </ul>
           <p>{exp.startDate}</p>
           <p>{exp.endDate}</p>
         </div>
