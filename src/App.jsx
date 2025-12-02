@@ -19,13 +19,16 @@ function App() {
       <div className="container">
         <General setName={setName} setEmail={setEmail} setPhone={setPhone} />
         <Education
+          school={school}
+          field={field}
+          date={date}
           setSchool={setSchool}
           setField={setField}
           setDate={setDate}
           setEducationList={setEducationList}
         />
         <GeneralDisplay name={name} email={email} phone={phone} />
-        {/* <EducationDisplay educationList={educationList} /> */}
+        <EducationDisplay educationList={educationList} />
       </div>
     </>
   );

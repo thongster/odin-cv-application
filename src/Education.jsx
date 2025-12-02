@@ -1,17 +1,16 @@
-export default function Education({ setSchool, setField, setDate, setEducationList }) {
+export default function Education({ school, field, date, setSchool, setField, setDate, setEducationList }) {
     
     function handleSubmit(e) {
     e.preventDefault();
 
     const entry = {
-        school: "",
-        field: "",
-        date: ""
+        id: crypto.randomUUID(),
+        school: school,
+        field: field,
+        date: date
     }
 
     setEducationList((prevList) => [...prevList, entry])
-    console.log(entry)
-    console.log(setEducationList)
   }
 
   return (
