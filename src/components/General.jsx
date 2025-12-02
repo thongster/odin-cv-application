@@ -1,19 +1,17 @@
 import { useState } from "react";
 
-export default function General({ name, email, phone, setName, setEmail, setPhone }) {
-  const [input, setInput] = useState(
-    {   
-        name: "",
-        email: "",
-        phone: ""
-    }
-  )
+export default function General({ setName, setEmail, setPhone }) {
+  const [input, setInput] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
 
   function handleSubmit(e) {
-    e.preventDefault()
-    setName(input.name)
-    setEmail(input.email)
-    setPhone(input.phone)
+    e.preventDefault();
+    setName(input.name);
+    setEmail(input.email);
+    setPhone(input.phone);
   }
 
   return (
@@ -27,7 +25,7 @@ export default function General({ name, email, phone, setName, setEmail, setPhon
             id="name"
             required
             placeholder="John D. Smith"
-            onChange={(e) => setInput({...input, name: e.target.value})}
+            onChange={(e) => setInput({ ...input, name: e.target.value })}
           />
         </div>
         <div className="emailDiv">
@@ -37,7 +35,7 @@ export default function General({ name, email, phone, setName, setEmail, setPhon
             id="email"
             required
             placeholder="johndsmith@gmail.com"
-            onChange={(e) => setInput({...input, email: e.target.value})}
+            onChange={(e) => setInput({ ...input, email: e.target.value })}
           />
         </div>
         <div className="phoneDiv">
@@ -47,7 +45,7 @@ export default function General({ name, email, phone, setName, setEmail, setPhon
             id="phone"
             required
             placeholder="555-555-5555"
-            onChange={(e) => setInput({...input, phone: e.target.value})}
+            onChange={(e) => setInput({ ...input, phone: e.target.value })}
           />
         </div>
         <button type="submit">Add</button>
