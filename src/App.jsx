@@ -53,7 +53,7 @@ function App() {
         />
         <GeneralDisplay name={name} email={email} phone={phone} />
         <EducationDisplay educationList={educationList} />
-        <ExperienceDisplay experienceList={experienceList}/>
+        <ExperienceDisplay experienceList={experienceList} />
       </div>
     </>
   );
