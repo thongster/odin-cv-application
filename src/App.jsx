@@ -28,32 +28,36 @@ function App() {
   return (
     <>
       <div className="container">
-        <General setName={setName} setEmail={setEmail} setPhone={setPhone} />
-        <Education
-          school={school}
-          field={field}
-          date={date}
-          setSchool={setSchool}
-          setField={setField}
-          setDate={setDate}
-          setEducationList={setEducationList}
-        />
-        <Experience
-          position={position}
-          company={company}
-          duties={duties}
-          startDate={startDate}
-          endDate={endDate}
-          setPosition={setPosition}
-          setCompany={setCompany}
-          setDuties={setDuties}
-          setStartDate={setStartDate}
-          setEndDate={setEndDate}
-          setExperienceList={setExperienceList}
-        />
-        <GeneralDisplay name={name} email={email} phone={phone} />
-        <EducationDisplay educationList={educationList} />
-        <ExperienceDisplay experienceList={experienceList} />
+        <div className="formSide">
+          <General setName={setName} setEmail={setEmail} setPhone={setPhone} />
+          <Education
+            school={school}
+            field={field}
+            date={date}
+            setSchool={setSchool}
+            setField={setField}
+            setDate={setDate}
+            setEducationList={setEducationList}
+          />
+          <Experience
+            position={position}
+            company={company}
+            duties={duties}
+            startDate={startDate}
+            endDate={endDate}
+            setPosition={setPosition}
+            setCompany={setCompany}
+            setDuties={setDuties}
+            setStartDate={setStartDate}
+            setEndDate={setEndDate}
+            setExperienceList={setExperienceList}
+          />
+        </div>
+        <div className="resumeSide">
+          <GeneralDisplay name={name} email={email} phone={phone} />
+          <EducationDisplay educationList={educationList} />
+          <ExperienceDisplay experienceList={experienceList} />
+        </div>
       </div>
     </>
   );

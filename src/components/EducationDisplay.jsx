@@ -1,6 +1,6 @@
 export default function EducationDisplay({ educationList }) {
   return (
-    <>
+    <div>
       <h2>Education</h2>
       {educationList.map((edu) => (
         <div key={edu.id}>
@@ -9,6 +9,6 @@ export default function EducationDisplay({ educationList }) {
           <p>{edu.date}</p>
         </div>
       ))}
-    </>
+    </div>
   );
 }

@@ -1,6 +1,6 @@
 export default function ExperienceDisplay({ experienceList }) {
   return (
-    <>
+    <div>
       <h2>Work Experience</h2>
       {experienceList.map((exp) => (
         <div key={exp.id}>
@@ -15,6 +15,6 @@ export default function ExperienceDisplay({ experienceList }) {
           <p>{exp.endDate}</p>
         </div>
       ))}
-    </>
+    </div>
   );
 }
