@@ -17,7 +17,14 @@ function App() {
   return (
     <>
       <div className="container">
-        <General setName={setName} setEmail={setEmail} setPhone={setPhone} />
+        <General 
+          name={name}
+          email={email}
+          phone={phone}
+          setName={setName} 
+          setEmail={setEmail} 
+          setPhone={setPhone} 
+        />
         <Education
           school={school}
           field={field}
