@@ -89,6 +89,7 @@ function App() {
             phone={phone}
             setGenEdit={setGenEdit}
             setIsGenEdit={setIsGenEdit}
+            setTab={setTab}
           />
           <EducationDisplay educationList={educationList} />
           <ExperienceDisplay experienceList={experienceList} />

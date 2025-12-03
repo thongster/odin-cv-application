@@ -4,6 +4,7 @@ export default function GeneralDisplay({
   phone,
   setGenEdit,
   setIsGenEdit,
+  setTab
 }) {
   function handleEdit() {
     setGenEdit({
@@ -12,6 +13,7 @@ export default function GeneralDisplay({
       phone: phone,
     });
     setIsGenEdit(true);
+    setTab("General")
   }
 
   return (
