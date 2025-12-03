@@ -35,14 +35,13 @@ function App() {
     phone,
   });
   const [eduEditId, setEduEditId] = useState(null);
-  const [eduEdit, setEduEdit] = useState([
+  const [eduEdit, setEduEdit] = useState(
     {
-      id: crypto.randomUUID(),
       school,
       field,
       date,
     },
-  ]);
+  );
   const [expEditId, setExpEditId] = useState(null);
   const [expEdit, setExpEdit] = useState([]);
 

@@ -8,6 +8,7 @@ export default function EducationDisplay({
 }) {
   function handleEdit(id) {
     setEduEditId(id);
+    setEduEdit;
     setTab("Education");
   }
   return (

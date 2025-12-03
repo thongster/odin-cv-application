@@ -39,7 +39,7 @@ export default function Education({
             value={eduEditId ? eduEdit.school : school}
             onChange={(e) => 
               eduEditId
-              ? setEduEdit(...eduEdit, {school: e.target.value})
+              ? setEduEdit((prev) => ({...prev, school: e.target.value}))
               : setSchool(e.target.value)}
           />
         </div>
