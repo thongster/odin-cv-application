@@ -34,10 +34,10 @@ function App() {
     email,
     phone,
   });
-  const [isEduEdit, setIsEduEdit] = useState(null);
+  const [eduEditId, setEduEditId] = useState(null);
   const [eduEdit, setEduEdit] = useState([]);
-  const [isExpEdit, setIsExpEdit] = useState(null);
-  const [expEDit, setExpEdit] = useState([]);
+  const [expEditId, setExpEditId] = useState(null);
+  const [expEdit, setExpEdit] = useState([]);
 
   return (
     <>
@@ -64,6 +64,10 @@ function App() {
               setField={setField}
               setDate={setDate}
               setEducationList={setEducationList}
+              eduEditId={eduEditId}
+              setEduEditId={setEduEditId}
+              eduEdit={eduEdit}
+              setEduEdit={setEduEdit}
             />
           )}
           {tab === "Experience" && (
@@ -91,8 +95,22 @@ function App() {
             setIsGenEdit={setIsGenEdit}
             setTab={setTab}
           />
-          <EducationDisplay educationList={educationList} />
-          <ExperienceDisplay experienceList={experienceList} />
+          <EducationDisplay
+            educationList={educationList}
+            eduEditId={eduEditId}
+            setEduEditId={setEduEditId}
+            eduEdit={eduEdit}
+            setEduEdit={setEduEdit}
+            setTab={setTab}
+          />
+          <ExperienceDisplay
+            experienceList={experienceList}
+            expEditId={expEditId}
+            setExpEditId={setExpEditId}
+            expEdit={expEdit}
+            setExpEdit={setExpEdit}
+            setTab={setTab}
+          />
         </div>
       </div>
     </>
