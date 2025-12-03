@@ -11,7 +11,7 @@ export default function GeneralDisplay({
       email: email,
       phone: phone,
     });
-    setIsGenEdit(true)
+    setIsGenEdit(true);
   }
 
   return (

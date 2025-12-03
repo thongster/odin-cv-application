@@ -64,7 +64,6 @@ function App() {
               setField={setField}
               setDate={setDate}
               setEducationList={setEducationList}
-
             />
           )}
           {tab === "Experience" && (

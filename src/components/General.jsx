@@ -1,6 +1,14 @@
 import { useState } from "react";
 
-export default function General({ setName, setEmail, setPhone, genEdit, setGenEdit, isGenEdit, setIsGenEdit }) {
+export default function General({
+  setName,
+  setEmail,
+  setPhone,
+  genEdit,
+  setGenEdit,
+  isGenEdit,
+  setIsGenEdit,
+}) {
   const [input, setInput] = useState({
     name: "",
     email: "",
@@ -18,7 +26,7 @@ export default function General({ setName, setEmail, setPhone, genEdit, setGenEd
       setEmail(input.email);
       setPhone(input.phone);
     }
-    setIsGenEdit(false) // set edit state back to false
+    setIsGenEdit(false); // set edit state back to false
   }
 
   return (
@@ -33,8 +41,10 @@ export default function General({ setName, setEmail, setPhone, genEdit, setGenEd
             required
             placeholder="John D. Smith"
             value={isGenEdit ? genEdit.name : input.name}
-            onChange={(e) => 
-              isGenEdit ? setGenEdit({ ...genEdit, name: e.target.value }) : setInput({ ...input, name: e.target.value })
+            onChange={(e) =>
+              isGenEdit
+                ? setGenEdit({ ...genEdit, name: e.target.value })
+                : setInput({ ...input, name: e.target.value })
             }
           />
         </div>
@@ -46,7 +56,11 @@ export default function General({ setName, setEmail, setPhone, genEdit, setGenEd
             required
             placeholder="johndsmith@gmail.com"
             value={isGenEdit ? genEdit.email : input.email}
-            onChange={(e) => setInput({ ...input, email: e.target.value })}
+            onChange={(e) =>
+              isGenEdit
+                ? setGenEdit({ ...genEdit, email: e.target.value })
+                : setInput({ ...input, email: e.target.value })
+            }
           />
         </div>
         <div className="phoneDiv">
@@ -57,7 +71,11 @@ export default function General({ setName, setEmail, setPhone, genEdit, setGenEd
             required
             placeholder="555-555-5555"
             value={isGenEdit ? genEdit.phone : input.phone}
-            onChange={(e) => setInput({ ...input, phone: e.target.value })}
+            onChange={(e) =>
+              isGenEdit
+                ? setGenEdit({ ...genEdit, phone: e.target.value })
+                : setInput({ ...input, phone: e.target.value })
+            }
           />
         </div>
         <button type="submit">Submit</button>
