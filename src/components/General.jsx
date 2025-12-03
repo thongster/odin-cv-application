@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function General({ setName, setEmail, setPhone }) {
+export default function General({ setName, setEmail, setPhone, genEdit, isGenEdit, setIsGenEdit }) {
   const [input, setInput] = useState({
     name: "",
     email: "",
@@ -12,6 +12,7 @@ export default function General({ setName, setEmail, setPhone }) {
     setName(input.name);
     setEmail(input.email);
     setPhone(input.phone);
+    setIsGenEdit(false) // set edit state back to false
   }
 
   return (
@@ -25,6 +26,7 @@ export default function General({ setName, setEmail, setPhone }) {
             id="name"
             required
             placeholder="John D. Smith"
+            value={isGenEdit ? genEdit.name : input.name}
             onChange={(e) => setInput({ ...input, name: e.target.value })}
           />
         </div>
@@ -35,6 +37,7 @@ export default function General({ setName, setEmail, setPhone }) {
             id="email"
             required
             placeholder="johndsmith@gmail.com"
+            value={isGenEdit ? genEdit.email : input.email}
             onChange={(e) => setInput({ ...input, email: e.target.value })}
           />
         </div>
@@ -45,6 +48,7 @@ export default function General({ setName, setEmail, setPhone }) {
             id="phone"
             required
             placeholder="555-555-5555"
+            value={isGenEdit ? genEdit.phone : input.phone}
             onChange={(e) => setInput({ ...input, phone: e.target.value })}
           />
         </div>

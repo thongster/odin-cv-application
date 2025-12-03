@@ -49,6 +49,9 @@ function App() {
               setName={setName}
               setEmail={setEmail}
               setPhone={setPhone}
+              genEdit={genEdit}
+              isGenEdit={isGenEdit}
+              setIsGenEdit={setIsGenEdit}
             />
           )}
           {tab === "Education" && (
@@ -60,6 +63,7 @@ function App() {
               setField={setField}
               setDate={setDate}
               setEducationList={setEducationList}
+
             />
           )}
           {tab === "Experience" && (
@@ -83,9 +87,7 @@ function App() {
             name={name}
             email={email}
             phone={phone}
-            genEdit={genEdit}
             setGenEdit={setGenEdit}
-            isGenEdit={isGenEdit}
             setIsGenEdit={setIsGenEdit}
           />
           <EducationDisplay educationList={educationList} />
