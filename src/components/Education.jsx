@@ -36,8 +36,11 @@ export default function Education({
             id="school"
             required
             placeholder="Harvard University"
-            value={school}
-            onChange={(e) => setSchool(e.target.value)}
+            value={eduEditId ? eduEdit.school : school}
+            onChange={(e) => 
+              eduEditId
+              ? setEduEdit(...eduEdit, {school: e.target.value})
+              : setSchool(e.target.value)}
           />
         </div>
         <div>
@@ -47,7 +50,7 @@ export default function Education({
             id="field"
             required
             placeholder="Computer Science"
-            value={field}
+            value={eduEditId ? eduEdit.field : field}
             onChange={(e) => setField(e.target.value)}
           />
         </div>
@@ -58,7 +61,7 @@ export default function Education({
             id="date"
             required
             placeholder="Harvard University"
-            value={date}
+            value={eduEditId ? eduEdit.date : date}
             onChange={(e) => setDate(e.target.value)}
           />
         </div>
