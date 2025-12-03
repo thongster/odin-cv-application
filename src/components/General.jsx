@@ -48,7 +48,7 @@ export default function General({ setName, setEmail, setPhone }) {
             onChange={(e) => setInput({ ...input, phone: e.target.value })}
           />
         </div>
-        <button type="submit">Add</button>
+        <button type="submit">Submit</button>
       </form>
     </>
   );

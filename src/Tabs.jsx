@@ -2,7 +2,7 @@ import "./styles/Tabs.css";
 
 export default function Tabs({ setTab }) {
   function handleClick(state) {
-    setTab(state)
+    setTab(state);
   }
 
   return (

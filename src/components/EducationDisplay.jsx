@@ -7,6 +7,7 @@ export default function EducationDisplay({ educationList }) {
           <p>{edu.school}</p>
           <p>{edu.field}</p>
           <p>{edu.date}</p>
+          <button>Edit</button>
         </div>
       ))}
     </div>

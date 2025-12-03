@@ -57,7 +57,7 @@ export default function Education({
             onChange={(e) => setDate(e.target.value)}
           />
         </div>
-        <button type="submit">Add</button>
+        <button type="submit">Submit</button>
       </form>
     </>
   );

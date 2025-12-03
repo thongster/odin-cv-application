@@ -5,6 +5,7 @@ export default function GeneralDisplay({ name, email, phone }) {
       <p>{name}</p>
       <p>{email}</p>
       <p>{phone}</p>
+      <button>Edit</button>
     </div>
   );
 }

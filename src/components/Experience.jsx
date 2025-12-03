@@ -84,7 +84,7 @@ export default function Experience({
             onChange={(e) => setEndDate(e.target.value)}
           ></input>
         </div>
-        <button type="submit">Add</button>
+        <button type="submit">Submit</button>
       </form>
     </>
   );

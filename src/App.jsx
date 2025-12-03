@@ -27,38 +27,59 @@ function App() {
   const [experienceList, setExperienceList] = useState([]);
   // Tabs states
   const [tab, setTab] = useState("General");
+  // Display states
+  const [editingId, setEditingId] = useState(null);
+  const [genEdit, setGenEdit] = useState([]);
+  const [eduEdit, setEduEdit] = useState([]);
+  const [expEDit, setExpEdit] = useState([]);
 
   return (
     <>
       <div className="container">
         <div className="formSide">
           <Tabs setTab={setTab} />
-          {tab === "General" && <General setName={setName} setEmail={setEmail} setPhone={setPhone} />}
-          {tab === "Education" && <Education
-            school={school}
-            field={field}
-            date={date}
-            setSchool={setSchool}
-            setField={setField}
-            setDate={setDate}
-            setEducationList={setEducationList}
-          />}
-          {tab === "Experience" && <Experience
-            position={position}
-            company={company}
-            duties={duties}
-            startDate={startDate}
-            endDate={endDate}
-            setPosition={setPosition}
-            setCompany={setCompany}
-            setDuties={setDuties}
-            setStartDate={setStartDate}
-            setEndDate={setEndDate}
-            setExperienceList={setExperienceList}
-          />}
+          {tab === "General" && (
+            <General
+              setName={setName}
+              setEmail={setEmail}
+              setPhone={setPhone}
+            />
+          )}
+          {tab === "Education" && (
+            <Education
+              school={school}
+              field={field}
+              date={date}
+              setSchool={setSchool}
+              setField={setField}
+              setDate={setDate}
+              setEducationList={setEducationList}
+            />
+          )}
+          {tab === "Experience" && (
+            <Experience
+              position={position}
+              company={company}
+              duties={duties}
+              startDate={startDate}
+              endDate={endDate}
+              setPosition={setPosition}
+              setCompany={setCompany}
+              setDuties={setDuties}
+              setStartDate={setStartDate}
+              setEndDate={setEndDate}
+              setExperienceList={setExperienceList}
+            />
+          )}
         </div>
         <div className="resumeSide">
-          <GeneralDisplay name={name} email={email} phone={phone} />
+          <GeneralDisplay
+            name={name}
+            email={email}
+            phone={phone}
+            editingId={editingId}
+            setEditingId={setEditingId}
+          />
           <EducationDisplay educationList={educationList} />
           <ExperienceDisplay experienceList={experienceList} />
         </div>
