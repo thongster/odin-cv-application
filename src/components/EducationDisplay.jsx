@@ -1,11 +1,13 @@
 export default function EducationDisplay({ 
   educationList,
+  eduEditId,
   setEduEditId,
   eduEdit,
   setEduEdit,
   setTab,
  }) {
   function handleEdit() {
+    setEduEditId(edu.id)
     setTab("Education")
   }
   return (

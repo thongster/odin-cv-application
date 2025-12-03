@@ -6,6 +6,10 @@ export default function Education({
   setField,
   setDate,
   setEducationList,
+  eduEditId,
+  setEduEditId,
+  eduEdit,
+  setEduEdit,
 }) {
   function handleSubmit(e) {
     e.preventDefault();
