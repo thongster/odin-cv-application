@@ -50,6 +50,7 @@ function App() {
               setEmail={setEmail}
               setPhone={setPhone}
               genEdit={genEdit}
+              setGenEdit={setGenEdit}
               isGenEdit={isGenEdit}
               setIsGenEdit={setIsGenEdit}
             />
