@@ -22,6 +22,7 @@ export default function Education({
     };
 
     setEducationList((prevList) => [...prevList, entry]);
+    setEduEditId(null);
   }
 
   return (

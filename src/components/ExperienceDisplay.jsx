@@ -1,9 +1,6 @@
-export default function ExperienceDisplay({
-  experienceList,
-
-}) {
+export default function ExperienceDisplay({ experienceList, setTab }) {
   function handleEdit() {
-    setTab("Education")
+    setTab("Experience");
   }
   return (
     <div>
