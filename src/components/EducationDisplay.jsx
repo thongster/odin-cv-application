@@ -1,5 +1,13 @@
-export default function EducationDisplay({ educationList }) {
-  function handleEdit() {}
+export default function EducationDisplay({ 
+  educationList,
+  setEduEditId,
+  eduEdit,
+  setEduEdit,
+  setTab,
+ }) {
+  function handleEdit() {
+    setTab("Education")
+  }
   return (
     <div>
       <h2>Education</h2>
@@ -8,7 +16,7 @@ export default function EducationDisplay({ educationList }) {
           <p>{edu.school}</p>
           <p>{edu.field}</p>
           <p>{edu.date}</p>
-          <button>Edit</button>
+          <button onClick={handleEdit}>Edit</button>
         </div>
       ))}
     </div>
