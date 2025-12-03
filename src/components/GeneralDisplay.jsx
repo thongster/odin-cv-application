@@ -2,10 +2,8 @@ export default function GeneralDisplay({
   name,
   email,
   phone,
-  genEdit,
   setGenEdit,
-  isGenEdit,
-  setIsGetEdit,
+  setIsGenEdit,
 }) {
   function handleEdit() {
     setGenEdit({
@@ -13,7 +11,7 @@ export default function GeneralDisplay({
       email: email,
       phone: phone,
     });
-    console.log(genEdit);
+    setIsGenEdit(true)
   }
 
   return (
