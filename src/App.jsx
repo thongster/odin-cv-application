@@ -28,9 +28,15 @@ function App() {
   // Tabs states
   const [tab, setTab] = useState("General");
   // Display states
-  const [editingId, setEditingId] = useState(null);
-  const [genEdit, setGenEdit] = useState([]);
+  const [isGenEdit, setIsGenEdit] = useState(false);
+  const [genEdit, setGenEdit] = useState({
+    name,
+    email,
+    phone,
+  });
+  const [isEduEdit, setIsEduEdit] = useState(null);
   const [eduEdit, setEduEdit] = useState([]);
+  const [isExpEdit, setIsExpEdit] = useState(null);
   const [expEDit, setExpEdit] = useState([]);
 
   return (
@@ -77,8 +83,10 @@ function App() {
             name={name}
             email={email}
             phone={phone}
-            editingId={editingId}
-            setEditingId={setEditingId}
+            genEdit={genEdit}
+            setGenEdit={setGenEdit}
+            isGenEdit={isGenEdit}
+            setIsGenEdit={setIsGenEdit}
           />
           <EducationDisplay educationList={educationList} />
           <ExperienceDisplay experienceList={experienceList} />

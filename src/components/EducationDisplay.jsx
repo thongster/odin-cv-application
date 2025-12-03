@@ -1,4 +1,5 @@
 export default function EducationDisplay({ educationList }) {
+  function handleEdit() {}
   return (
     <div>
       <h2>Education</h2>
