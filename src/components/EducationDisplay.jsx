@@ -6,9 +6,9 @@ export default function EducationDisplay({
   setEduEdit,
   setTab,
 }) {
-  function handleEdit(id) {
-    setEduEditId(id);
-    setEduEdit;
+  function handleEdit(edu) {
+    setEduEditId(edu.id);
+    setEduEdit(edu);
     setTab("Education");
   }
   return (
@@ -19,7 +19,7 @@ export default function EducationDisplay({
           <p>{edu.school}</p>
           <p>{edu.field}</p>
           <p>{edu.date}</p>
-          <button onClick={() => handleEdit(edu.id)}>Edit</button>
+          <button onClick={() => handleEdit(edu)}>Edit</button>
         </div>
       ))}
     </div>
