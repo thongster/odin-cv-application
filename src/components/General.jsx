@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styles/Forms.css"
+import "../styles/Forms.css";
 
 export default function General({
   setName,
