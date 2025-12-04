@@ -53,8 +53,11 @@ export default function Experience({
             id="position"
             required
             placeholder="Sales Consultant"
-            value={eduEditId ? eduEdit.position : position}
-            onChange={(e) => setPosition(e.target.value)}
+            value={expEditId ? expEdit.position : position}
+            onChange={(e) => 
+                expEditId
+                  ? setExpEdit((prev) => ({...prev, position: e.target.value}))
+                  : setPosition(e.target.value)}
           />
         </div>
         <div>
@@ -64,8 +67,12 @@ export default function Experience({
             id="company"
             required
             placeholder="Far East Trading Company"
-            value={eduEditId ? eduEdit.company : company}
-            onChange={(e) => setCompany(e.target.value)}
+            value={expEditId ? expEdit.company : company}
+            onChange={(e) => 
+                expEditId
+                  ? setExpEdit((prev) => ({...prev, company: e.target.value}))
+                  : setCompany(e.target.value)
+            }
           />
         </div>
         <div>
@@ -75,8 +82,12 @@ export default function Experience({
             required
             placeholder="Increased sales 100%"
             rows="6"
-            value={eduEditId ? eduEdit.duties : duties}
-            onChange={(e) => setDuties(e.target.value)}
+            value={expEditId ? expEdit.duties : duties}
+            onChange={(e) => 
+                expEditId
+                  ? setExpEdit((prev) => ({...prev, duties: e.target.value}))
+                  : setDuties(e.target.value)
+            }
           ></textarea>
         </div>
         <div>
@@ -85,8 +96,12 @@ export default function Experience({
             type="date"
             id="startDate"
             required
-            value={eduEditId ? eduEdit.startDate : startDate}
-            onChange={(e) => setStartDate(e.target.value)}
+            value={expEditId ? expEdit.startDate : startDate}
+            onChange={(e) => 
+                expEditId
+                  ? setExpEdit((prev) => ({...prev, startDate: e.target.value}))
+                  : setStartDate(e.target.value)
+            }
           ></input>
         </div>
         <div>
@@ -95,8 +110,12 @@ export default function Experience({
             type="date"
             id="endDate"
             required
-            value={endDate}
-            onChange={(e) => setEndDate(e.target.value)}
+            value={expEditId ? expEdit.endDate : endDate}
+            onChange={(e) => 
+                expEditId
+                  ? setExpEdit((prev) => ({...prev, endDate: e.target.value}))
+                  : setEndDate(e.target.value)
+            }
           ></input>
         </div>
         <button type="submit">Submit</button>
