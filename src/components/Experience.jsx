@@ -27,19 +27,21 @@ export default function Experience({
       endDate: endDate,
     };
 
-    expEditId 
-      ? setExperienceList((prevList) => 
-          prevList.map((exp) => {
-            if (exp.id === expEditId) {
-                return {...expEdit}
-            } else {
-                return exp
-            }  
-          })
-        )
-      : setExperienceList((prevList) => [...prevList, entry]);      
+    if (expEditId) {
+      setExperienceList((prevList) =>
+        prevList.map((exp) => {
+          if (exp.id === expEditId) {
+            return { ...expEdit };
+          } else {
+            return exp;
+          }
+        }),
+      );
+    } else {
+      setExperienceList((prevList) => [...prevList, entry]);
+    }
 
-    setExpEditId(null)
+    setExpEditId(null);
   }
 
   return (
@@ -54,10 +56,11 @@ export default function Experience({
             required
             placeholder="Sales Consultant"
             value={expEditId ? expEdit.position : position}
-            onChange={(e) => 
-                expEditId
-                  ? setExpEdit((prev) => ({...prev, position: e.target.value}))
-                  : setPosition(e.target.value)}
+            onChange={(e) =>
+              expEditId
+                ? setExpEdit((prev) => ({ ...prev, position: e.target.value }))
+                : setPosition(e.target.value)
+            }
           />
         </div>
         <div>
@@ -68,10 +71,10 @@ export default function Experience({
             required
             placeholder="Far East Trading Company"
             value={expEditId ? expEdit.company : company}
-            onChange={(e) => 
-                expEditId
-                  ? setExpEdit((prev) => ({...prev, company: e.target.value}))
-                  : setCompany(e.target.value)
+            onChange={(e) =>
+              expEditId
+                ? setExpEdit((prev) => ({ ...prev, company: e.target.value }))
+                : setCompany(e.target.value)
             }
           />
         </div>
@@ -83,10 +86,10 @@ export default function Experience({
             placeholder="Increased sales 100%"
             rows="6"
             value={expEditId ? expEdit.duties : duties}
-            onChange={(e) => 
-                expEditId
-                  ? setExpEdit((prev) => ({...prev, duties: e.target.value}))
-                  : setDuties(e.target.value)
+            onChange={(e) =>
+              expEditId
+                ? setExpEdit((prev) => ({ ...prev, duties: e.target.value }))
+                : setDuties(e.target.value)
             }
           ></textarea>
         </div>
@@ -97,10 +100,10 @@ export default function Experience({
             id="startDate"
             required
             value={expEditId ? expEdit.startDate : startDate}
-            onChange={(e) => 
-                expEditId
-                  ? setExpEdit((prev) => ({...prev, startDate: e.target.value}))
-                  : setStartDate(e.target.value)
+            onChange={(e) =>
+              expEditId
+                ? setExpEdit((prev) => ({ ...prev, startDate: e.target.value }))
+                : setStartDate(e.target.value)
             }
           ></input>
         </div>
@@ -111,10 +114,10 @@ export default function Experience({
             id="endDate"
             required
             value={expEditId ? expEdit.endDate : endDate}
-            onChange={(e) => 
-                expEditId
-                  ? setExpEdit((prev) => ({...prev, endDate: e.target.value}))
-                  : setEndDate(e.target.value)
+            onChange={(e) =>
+              expEditId
+                ? setExpEdit((prev) => ({ ...prev, endDate: e.target.value }))
+                : setEndDate(e.target.value)
             }
           ></input>
         </div>

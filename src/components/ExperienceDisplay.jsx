@@ -23,7 +23,7 @@ export default function ExperienceDisplay({
           </ul>
           <p>{exp.startDate}</p>
           <p>{exp.endDate}</p>
-          <button onClick={handleEdit(exp)}>Edit</button>
+          <button onClick={() => handleEdit(exp)}>Edit</button>
         </div>
       ))}
     </div>
