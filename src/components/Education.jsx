@@ -21,7 +21,12 @@ export default function Education({
       date: date,
     };
 
-    setEducationList((prevList) => [...prevList, entry]);
+    if (eduEditId) {
+      
+    } else if (!eduEditId) {
+      setEducationList((prevList) => [...prevList, entry])
+    }
+
     setEduEditId(null);
   }
 
@@ -51,7 +56,12 @@ export default function Education({
             required
             placeholder="Computer Science"
             value={eduEditId ? eduEdit.field : field}
-            onChange={(e) => setField(e.target.value)}
+            onChange={(e) => 
+              eduEditId
+              ? setEduEdit((prev) => ({...prev, field: e.target.value}))
+              : setField(e.target.value)
+            }
+            
           />
         </div>
         <div>
@@ -62,7 +72,11 @@ export default function Education({
             required
             placeholder="Harvard University"
             value={eduEditId ? eduEdit.date : date}
-            onChange={(e) => setDate(e.target.value)}
+            onChange={(e) => 
+              eduEditId
+              ? setEduEdit((prev) => ({...prev, date: e.target.value}))
+              : setDate(e.target.value)
+            }
           />
         </div>
         <button type="submit">Submit</button>
