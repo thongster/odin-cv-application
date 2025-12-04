@@ -41,7 +41,7 @@ function App() {
     date,
   });
   const [expEditId, setExpEditId] = useState(null);
-  const [expEdit, setExpEdit] = useState([]);
+  const [expEdit, setExpEdit] = useState({});
 
   return (
     <>

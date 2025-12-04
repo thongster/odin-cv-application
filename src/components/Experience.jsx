@@ -38,6 +38,8 @@ export default function Experience({
           })
         )
       : setExperienceList((prevList) => [...prevList, entry]);      
+
+    setExpEditId(null)
   }
 
   return (
@@ -62,7 +64,7 @@ export default function Experience({
             id="company"
             required
             placeholder="Far East Trading Company"
-            value={company}
+            value={eduEditId ? eduEdit.company : company}
             onChange={(e) => setCompany(e.target.value)}
           />
         </div>
@@ -73,7 +75,7 @@ export default function Experience({
             required
             placeholder="Increased sales 100%"
             rows="6"
-            value={duties}
+            value={eduEditId ? eduEdit.duties : duties}
             onChange={(e) => setDuties(e.target.value)}
           ></textarea>
         </div>
@@ -83,7 +85,7 @@ export default function Experience({
             type="date"
             id="startDate"
             required
-            value={startDate}
+            value={eduEditId ? eduEdit.startDate : startDate}
             onChange={(e) => setStartDate(e.target.value)}
           ></input>
         </div>
