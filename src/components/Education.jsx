@@ -22,7 +22,8 @@ export default function Education({
     };
 
     if (eduEditId) {
-      
+      setEducationList((prevList) => [...prevList, eduEdit])
+      console.log(eduEdit)
     } else if (!eduEditId) {
       setEducationList((prevList) => [...prevList, entry])
     }
