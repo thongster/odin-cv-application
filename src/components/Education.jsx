@@ -5,6 +5,7 @@ export default function Education({
   setSchool,
   setField,
   setDate,
+  educationList,
   setEducationList,
   eduEditId,
   setEduEditId,
@@ -22,7 +23,11 @@ export default function Education({
     };
 
     if (eduEditId) {
-      setEducationList((prevList) => [...prevList, eduEdit])
+      eduItem = educationList.filter()
+      setEducationList((prevList) => 
+        
+        [...prevList, eduEdit]
+    )
       console.log(eduEdit)
     } else if (!eduEditId) {
       setEducationList((prevList) => [...prevList, entry])

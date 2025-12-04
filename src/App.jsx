@@ -69,6 +69,7 @@ function App() {
               setSchool={setSchool}
               setField={setField}
               setDate={setDate}
+              educationList={educationList}
               setEducationList={setEducationList}
               eduEditId={eduEditId}
               setEduEditId={setEduEditId}
