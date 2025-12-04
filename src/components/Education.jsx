@@ -1,3 +1,5 @@
+import "../styles/Forms.css"
+
 export default function Education({
   school,
   field,
