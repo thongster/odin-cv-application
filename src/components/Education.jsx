@@ -5,7 +5,6 @@ export default function Education({
   setSchool,
   setField,
   setDate,
-  educationList,
   setEducationList,
   eduEditId,
   setEduEditId,
@@ -23,16 +22,17 @@ export default function Education({
     };
 
     if (eduEditId) {
-      setEducationList((prevList) => 
-        // loop through list 
+      setEducationList((prevList) =>
+        // loop through list
         prevList.map((edu) => {
           // if id is the selected id, replace the object with eduEdit
           // else return original
           if (edu.id === eduEditId) {
-            return {...eduEdit}
+            return { ...eduEdit };
           } else {
-            return edu
-          }})
+            return edu;
+          }
+        }),
       );
     } else if (!eduEditId) {
       setEducationList((prevList) => [...prevList, entry]);

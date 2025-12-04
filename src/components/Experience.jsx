@@ -10,6 +10,10 @@ export default function Experience({
   setStartDate,
   setEndDate,
   setExperienceList,
+  expEditId,
+  setExpEditId,
+  expEdit,
+  setExpEdit,
 }) {
   function handleSubmit(e) {
     e.preventDefault();
@@ -23,8 +27,17 @@ export default function Experience({
       endDate: endDate,
     };
 
-    setExperienceList((prevList) => [...prevList, entry]);
-    console.log(entry);
+    expEditId 
+      ? setExperienceList((prevList) => 
+          prevList.map((exp) => {
+            if (exp.id === expEditId) {
+                return {...expEdit}
+            } else {
+                return exp
+            }  
+          })
+        )
+      : setExperienceList((prevList) => [...prevList, entry]);      
   }
 
   return (
@@ -38,7 +51,7 @@ export default function Experience({
             id="position"
             required
             placeholder="Sales Consultant"
-            value={position}
+            value={eduEditId ? eduEdit.position : position}
             onChange={(e) => setPosition(e.target.value)}
           />
         </div>

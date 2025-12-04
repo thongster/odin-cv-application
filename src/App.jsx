@@ -88,6 +88,10 @@ function App() {
               setStartDate={setStartDate}
               setEndDate={setEndDate}
               setExperienceList={setExperienceList}
+              expEditId={expEditId}
+              setExpEditId={setExpEditId}
+              expEdit={expEdit}
+              setExpEdit={setExpEdit}
             />
           )}
         </div>

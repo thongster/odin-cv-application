@@ -1,7 +1,12 @@
-export default function ExperienceDisplay({ experienceList, setTab, setExpEditId, setExpEdit }) {
+export default function ExperienceDisplay({
+  experienceList,
+  setTab,
+  setExpEditId,
+  setExpEdit,
+}) {
   function handleEdit(exp) {
-    setExpEditId(exp.id)
-    setExpEdit(exp)
+    setExpEditId(exp.id);
+    setExpEdit(exp);
     setTab("Experience");
   }
   return (

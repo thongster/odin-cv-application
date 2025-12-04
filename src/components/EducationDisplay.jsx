@@ -1,8 +1,6 @@
 export default function EducationDisplay({
   educationList,
-  eduEditId,
   setEduEditId,
-  eduEdit,
   setEduEdit,
   setTab,
 }) {
