@@ -23,14 +23,19 @@ export default function Education({
     };
 
     if (eduEditId) {
-      eduItem = educationList.filter()
       setEducationList((prevList) => 
-        
-        [...prevList, eduEdit]
-    )
-      console.log(eduEdit)
+        // loop through list 
+        prevList.map((edu) => {
+          // if id is the selected id, replace the object with eduEdit
+          // else return original
+          if (edu.id === eduEditId) {
+            return {...eduEdit}
+          } else {
+            return edu
+          }})
+      );
     } else if (!eduEditId) {
-      setEducationList((prevList) => [...prevList, entry])
+      setEducationList((prevList) => [...prevList, entry]);
     }
 
     setEduEditId(null);
@@ -48,10 +53,11 @@ export default function Education({
             required
             placeholder="Harvard University"
             value={eduEditId ? eduEdit.school : school}
-            onChange={(e) => 
+            onChange={(e) =>
               eduEditId
-              ? setEduEdit((prev) => ({...prev, school: e.target.value}))
-              : setSchool(e.target.value)}
+                ? setEduEdit((prev) => ({ ...prev, school: e.target.value }))
+                : setSchool(e.target.value)
+            }
           />
         </div>
         <div>
@@ -62,12 +68,11 @@ export default function Education({
             required
             placeholder="Computer Science"
             value={eduEditId ? eduEdit.field : field}
-            onChange={(e) => 
+            onChange={(e) =>
               eduEditId
-              ? setEduEdit((prev) => ({...prev, field: e.target.value}))
-              : setField(e.target.value)
+                ? setEduEdit((prev) => ({ ...prev, field: e.target.value }))
+                : setField(e.target.value)
             }
-            
           />
         </div>
         <div>
@@ -78,10 +83,10 @@ export default function Education({
             required
             placeholder="Harvard University"
             value={eduEditId ? eduEdit.date : date}
-            onChange={(e) => 
+            onChange={(e) =>
               eduEditId
-              ? setEduEdit((prev) => ({...prev, date: e.target.value}))
-              : setDate(e.target.value)
+                ? setEduEdit((prev) => ({ ...prev, date: e.target.value }))
+                : setDate(e.target.value)
             }
           />
         </div>

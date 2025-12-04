@@ -1,5 +1,5 @@
 export default function ExperienceDisplay({ experienceList, setTab }) {
-  function handleEdit() {
+  function handleEdit(exp) {
     setTab("Experience");
   }
   return (
@@ -16,7 +16,7 @@ export default function ExperienceDisplay({ experienceList, setTab }) {
           </ul>
           <p>{exp.startDate}</p>
           <p>{exp.endDate}</p>
-          <button onClick={handleEdit}>Edit</button>
+          <button onClick={handleEdit(exp)}>Edit</button>
         </div>
       ))}
     </div>

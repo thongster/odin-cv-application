@@ -35,13 +35,11 @@ function App() {
     phone,
   });
   const [eduEditId, setEduEditId] = useState(null);
-  const [eduEdit, setEduEdit] = useState(
-    {
-      school,
-      field,
-      date,
-    },
-  );
+  const [eduEdit, setEduEdit] = useState({
+    school,
+    field,
+    date,
+  });
   const [expEditId, setExpEditId] = useState(null);
   const [expEdit, setExpEdit] = useState([]);
 
