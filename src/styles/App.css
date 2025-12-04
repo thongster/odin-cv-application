@@ -1,7 +1,6 @@
 #root {
   width: 1280px;
   margin: 0 auto;
-  padding: 1rem;
 }
 
 .container {
@@ -10,16 +9,21 @@
   align-items: start;
   justify-content: space-between;
   gap: 1rem;
-  border: 1px solid red;
   width: 100%;
+  background: #f5f7fa;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 1rem;
 }
 
 .formSide {
   display: flex;
   flex-direction: column;
+  background: #ffffff;
   flex: 0 1 40%;
-  border: 1px solid yellow;
-  padding: 0.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
 .formSide textarea {
