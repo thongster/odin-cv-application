@@ -53,6 +53,21 @@ export default function General({
             }
           />
         </div>
+        <div className="addressDiv">
+          <label htmlFor="address">Address: </label>
+          <input
+            type="text"
+            id="address"
+            required
+            placeholder="Seattle WA, USA"
+            value={isGenEdit ? genEdit.address : input.address}
+            onChange={(e) =>
+              isGenEdit
+                ? setGenEdit({ ...genEdit, address: e.target.value })
+                : setInput({ ...input, address: e.target.value })
+            }
+          />
+        </div>
         <div className="emailDiv">
           <label htmlFor="email">Email: </label>
           <input
@@ -80,21 +95,6 @@ export default function General({
               isGenEdit
                 ? setGenEdit({ ...genEdit, phone: e.target.value })
                 : setInput({ ...input, phone: e.target.value })
-            }
-          />
-        </div>
-        <div className="addressDiv">
-          <label htmlFor="address">Address: </label>
-          <input
-            type="text"
-            id="address"
-            required
-            placeholder="Seattle WA, USA"
-            value={isGenEdit ? genEdit.address : input.address}
-            onChange={(e) =>
-              isGenEdit
-                ? setGenEdit({ ...genEdit, address: e.target.value })
-                : setInput({ ...input, address: e.target.value })
             }
           />
         </div>

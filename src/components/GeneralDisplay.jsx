@@ -21,9 +21,9 @@ export default function GeneralDisplay({
   return (
     <div>
       <h2>{name}</h2>
+      <p>{address}</p>
       <p>{email}</p>
       <p>{phone}</p>
-      <p>{address}</p>
       <button onClick={handleEdit}>Edit</button>
     </div>
   );
