@@ -14,7 +14,7 @@ export default function GeneralDisplay({
       email: email,
       phone: phone,
       address: address,
-      objective: objective
+      objective: objective,
     });
     setIsGenEdit(true); // flag to allow edit and autofill form with prev info
     setTab("General"); // switch to General tab
@@ -22,12 +22,12 @@ export default function GeneralDisplay({
 
   return (
     <div>
-      <h2>{name
-            ? name
-            : "General"}</h2>
-      <p>{address}</p>
-      <p>{email}</p>
-      <p>{phone}</p>
+      <h2>{name ? name : "General"}</h2>
+      <div className="info">
+        <p>{address}</p>
+        <p>{email}</p>
+        <p>{phone}</p>
+      </div>
       <p className="objective">{objective}</p>
       <button onClick={handleEdit}>Edit</button>
     </div>

@@ -1,0 +1,15 @@
+.info {
+    display: flex;
+}
+
+.info p:nth-child(1), .info p:nth-child(2) {
+  border-right: 2px solid #e1e6ef;
+}
+
+.info p:nth-child(1) {
+    padding-right: 1rem;
+}
+
+.info p:nth-child(2), .info p:nth-child(3) {
+    padding: 0 1rem;
+}
