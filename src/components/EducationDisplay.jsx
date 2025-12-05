@@ -11,7 +11,7 @@ export default function EducationDisplay({
   }
   return (
     <div>
-      <h2>Education</h2>
+      <h3>Education</h3>
       {educationList.map((edu) => (
         <div key={edu.id}>
           <p>{edu.school}</p>

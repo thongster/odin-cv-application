@@ -23,6 +23,8 @@ a:hover {
 }
 
 body {
+  font-family: "Inter", Arial, sans-serif;
+  background: #f4f6f9;
   margin: 0;
   display: flex;
   min-width: 320px;

@@ -11,7 +11,7 @@ export default function ExperienceDisplay({
   }
   return (
     <div>
-      <h2>Work Experience</h2>
+      <h3>Work Experience</h3>
       {experienceList.map((exp) => (
         <div key={exp.id}>
           <p>{exp.position}</p>
