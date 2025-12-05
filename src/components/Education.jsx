@@ -80,7 +80,7 @@ export default function Education({
         <div>
           <label htmlFor="date">Graduation Date: </label>
           <input
-            type="date"
+            type="month"
             id="date"
             required
             placeholder="Harvard University"
