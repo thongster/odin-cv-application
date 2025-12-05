@@ -17,6 +17,7 @@ export default function General({
     email: "",
     phone: "",
     address: "",
+    objective: "",
   });
 
   function handleSubmit(e) {
@@ -26,11 +27,13 @@ export default function General({
       setEmail(genEdit.email);
       setPhone(genEdit.phone);
       setAddress(genEdit.address);
+      setObjective(genEdit.objective);
     } else if (!isGenEdit) {
       setName(input.name);
       setEmail(input.email);
       setPhone(input.phone);
       setAddress(input.address);
+      setObjective(input.objective);
     }
     setIsGenEdit(false); // set edit state back to false
   }
@@ -98,6 +101,21 @@ export default function General({
                 : setInput({ ...input, phone: e.target.value })
             }
           />
+        </div>
+        <div className="objectiveDiv">
+          <label htmlFor="objective">Objective: </label>
+          <textarea
+            id="objective"
+            required
+            rows="6"
+            placeholder="To utilize my b2b sales background..."
+            value={isGenEdit ? genEdit.objective : input.objective}
+            onChange={(e) =>
+              isGenEdit
+                ? setGenEdit({ ...genEdit, objective: e.target.value })
+                : setInput({ ...input, objective: e.target.value })
+            }
+          ></textarea>
         </div>
         <button type="submit">Submit</button>
       </form>
