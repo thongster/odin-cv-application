@@ -13,6 +13,7 @@ function App() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
   // Education info
   const [educationList, setEducationList] = useState([]);
   const [school, setSchool] = useState("");
@@ -53,6 +54,7 @@ function App() {
               setName={setName}
               setEmail={setEmail}
               setPhone={setPhone}
+              setAddress={setAddress}
               genEdit={genEdit}
               setGenEdit={setGenEdit}
               isGenEdit={isGenEdit}
@@ -100,6 +102,7 @@ function App() {
             name={name}
             email={email}
             phone={phone}
+            address={address}
             setGenEdit={setGenEdit}
             setIsGenEdit={setIsGenEdit}
             setTab={setTab}
