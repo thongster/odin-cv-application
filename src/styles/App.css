@@ -37,3 +37,22 @@
   overflow-y: auto;
   max-width: 900px;
 }
+
+.resumeSide h2 {
+  margin-bottom: 1rem;
+  color: #1b4b8a;
+  border-bottom: 2px solid #e1e6ef;
+  padding-bottom: 0.25rem;
+}
+
+.resumeSide p {
+  margin: 0.2rem 0;
+}
+
+.resumeSide ul {
+  margin: 0.4rem 0 1rem 0rem;
+}
+
+.resumeSide li {
+  margin-bottom: 0.25rem;
+}
