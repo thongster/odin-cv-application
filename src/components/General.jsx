@@ -6,6 +6,7 @@ export default function General({
   setEmail,
   setPhone,
   setAddress,
+  setObjective,
   genEdit,
   setGenEdit,
   isGenEdit,
