@@ -14,6 +14,7 @@ function App() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
+  const [objective, setObjective] = useState("");
   // Education info
   const [educationList, setEducationList] = useState([]);
   const [school, setSchool] = useState("");
@@ -56,6 +57,7 @@ function App() {
               setEmail={setEmail}
               setPhone={setPhone}
               setAddress={setAddress}
+              setObjective={setObjective}
               genEdit={genEdit}
               setGenEdit={setGenEdit}
               isGenEdit={isGenEdit}
@@ -104,6 +106,7 @@ function App() {
             email={email}
             phone={phone}
             address={address}
+            objective={objective}
             setGenEdit={setGenEdit}
             setIsGenEdit={setIsGenEdit}
             setTab={setTab}
