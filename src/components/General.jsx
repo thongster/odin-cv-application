@@ -5,6 +5,7 @@ export default function General({
   setName,
   setEmail,
   setPhone,
+  setAddress,
   genEdit,
   setGenEdit,
   isGenEdit,
@@ -14,6 +15,7 @@ export default function General({
     name: "",
     email: "",
     phone: "",
+    address: "",
   });
 
   function handleSubmit(e) {
@@ -22,10 +24,12 @@ export default function General({
       setName(genEdit.name);
       setEmail(genEdit.email);
       setPhone(genEdit.phone);
+      setAddress(genEdit.address);
     } else if (!isGenEdit) {
       setName(input.name);
       setEmail(input.email);
       setPhone(input.phone);
+      setAddress(input.address);
     }
     setIsGenEdit(false); // set edit state back to false
   }
@@ -76,6 +80,21 @@ export default function General({
               isGenEdit
                 ? setGenEdit({ ...genEdit, phone: e.target.value })
                 : setInput({ ...input, phone: e.target.value })
+            }
+          />
+        </div>
+        <div className="addressDiv">
+          <label htmlFor="address">Address: </label>
+          <input
+            type="text"
+            id="address"
+            required
+            placeholder="Seattle WA, USA"
+            value={isGenEdit ? genEdit.address : input.address}
+            onChange={(e) =>
+              isGenEdit
+                ? setGenEdit({ ...genEdit, address: e.target.value })
+                : setInput({ ...input, address: e.target.value })
             }
           />
         </div>

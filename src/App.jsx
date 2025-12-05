@@ -34,6 +34,7 @@ function App() {
     name,
     email,
     phone,
+    address,
   });
   const [eduEditId, setEduEditId] = useState(null);
   const [eduEdit, setEduEdit] = useState({
