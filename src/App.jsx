@@ -65,24 +65,6 @@ function App() {
               setIsGenEdit={setIsGenEdit}
             />
           )}
-          {tab === "Education" && (
-            <Education
-              school={school}
-              field={field}
-              date={date}
-              studyLocation={studyLocation}
-              setSchool={setSchool}
-              setField={setField}
-              setDate={setDate}
-              setStudyLocation={setStudyLocation}
-              educationList={educationList}
-              setEducationList={setEducationList}
-              eduEditId={eduEditId}
-              setEduEditId={setEduEditId}
-              eduEdit={eduEdit}
-              setEduEdit={setEduEdit}
-            />
-          )}
           {tab === "Experience" && (
             <Experience
               position={position}
@@ -102,6 +84,24 @@ function App() {
               setExpEdit={setExpEdit}
             />
           )}
+          {tab === "Education" && (
+            <Education
+              school={school}
+              field={field}
+              date={date}
+              studyLocation={studyLocation}
+              setSchool={setSchool}
+              setField={setField}
+              setDate={setDate}
+              setStudyLocation={setStudyLocation}
+              educationList={educationList}
+              setEducationList={setEducationList}
+              eduEditId={eduEditId}
+              setEduEditId={setEduEditId}
+              eduEdit={eduEdit}
+              setEduEdit={setEduEdit}
+            />
+          )}
         </div>
         <div className="resumeSide">
           <GeneralDisplay
@@ -114,14 +114,6 @@ function App() {
             setIsGenEdit={setIsGenEdit}
             setTab={setTab}
           />
-          <EducationDisplay
-            educationList={educationList}
-            eduEditId={eduEditId}
-            setEduEditId={setEduEditId}
-            eduEdit={eduEdit}
-            setEduEdit={setEduEdit}
-            setTab={setTab}
-          />
           <ExperienceDisplay
             experienceList={experienceList}
             expEditId={expEditId}
@@ -130,6 +122,15 @@ function App() {
             setExpEdit={setExpEdit}
             setTab={setTab}
           />
+          <EducationDisplay
+            educationList={educationList}
+            eduEditId={eduEditId}
+            setEduEditId={setEduEditId}
+            eduEdit={eduEdit}
+            setEduEdit={setEduEdit}
+            setTab={setTab}
+          />
+
         </div>
       </div>
     </>

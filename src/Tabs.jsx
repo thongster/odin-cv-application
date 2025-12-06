@@ -8,8 +8,8 @@ export default function Tabs({ setTab }) {
   return (
     <div className="tabs">
       <button onClick={() => handleClick("General")}>General</button>
-      <button onClick={() => handleClick("Education")}>Education</button>
       <button onClick={() => handleClick("Experience")}>Experience</button>
+      <button onClick={() => handleClick("Education")}>Education</button>
     </div>
   );
 }
