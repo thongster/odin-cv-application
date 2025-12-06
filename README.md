@@ -2,6 +2,8 @@
 
 Project: CV Application from The Odin Project's React Course
 
+Link to deployed project: [https://odin-cv-application-gules.vercel.app/](https://odin-cv-application-gules.vercel.app/)
+
 Wow! This is my first ever time working with React.
 
 I admittedly struggled tremendously at first to understand props, states, and the general syntax around using React. I was confident with my vanilla javascript skills, but having to implement it into React with the new specific syntax rules was quite frustrating at first!
