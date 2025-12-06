@@ -23,7 +23,7 @@ export default function Education({
       school: school,
       field: field,
       date: date,
-      studyLocation: studyLocation
+      studyLocation: studyLocation,
     };
 
     if (eduEditId) {
@@ -90,7 +90,10 @@ export default function Education({
             value={eduEditId ? eduEdit.studyLocation : studyLocation}
             onChange={(e) =>
               eduEditId
-                ? setEduEdit((prev) => ({ ...prev, studyLocation: e.target.value }))
+                ? setEduEdit((prev) => ({
+                    ...prev,
+                    studyLocation: e.target.value,
+                  }))
                 : setStudyLocation(e.target.value)
             }
           />

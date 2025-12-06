@@ -1,3 +1,5 @@
+import "../styles/EducationDisplay.css";
+
 export default function EducationDisplay({
   educationList,
   setEduEditId,
@@ -11,8 +13,8 @@ export default function EducationDisplay({
   }
 
   function convertDate(raw) {
-    const date = new Date(raw + "-01")
-    return date.toLocaleString("en-US", { month: "long", year: "numeric" })
+    const date = new Date(raw + "-01");
+    return date.toLocaleString("en-US", { month: "long", year: "numeric" });
   }
 
   return (
@@ -20,9 +22,14 @@ export default function EducationDisplay({
       <h3>Education</h3>
       {educationList.map((edu) => (
         <div key={edu.id}>
-          <p>{edu.school}</p>
-          <p>{edu.field}</p>
-          <p>{convertDate(edu.date)}</p>
+          <div className="firstLine">
+            <p>{edu.school}</p>
+            <p>{edu.field}</p>
+          </div>
+          <div className="secondLine">
+            <p>{edu.studyLocation}</p>
+            <p>{convertDate(edu.date)}</p>
+          </div>
           <button onClick={() => handleEdit(edu)}>Edit</button>
         </div>
       ))}

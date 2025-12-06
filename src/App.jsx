@@ -20,6 +20,7 @@ function App() {
   const [school, setSchool] = useState("");
   const [field, setField] = useState("");
   const [date, setDate] = useState("");
+  const [studyLocation, setStudyLocation] = useState("");
   // Experience info
   const [position, setPosition] = useState("");
   const [company, setCompany] = useState("");
@@ -69,9 +70,11 @@ function App() {
               school={school}
               field={field}
               date={date}
+              studyLocation={studyLocation}
               setSchool={setSchool}
               setField={setField}
               setDate={setDate}
+              setStudyLocation={setStudyLocation}
               educationList={educationList}
               setEducationList={setEducationList}
               eduEditId={eduEditId}
