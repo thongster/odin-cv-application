@@ -23,11 +23,11 @@ export default function EducationDisplay({
       {educationList.map((edu) => (
         <div key={edu.id}>
           <div className="firstLine">
-            <p>{edu.school}</p>
-            <p>{edu.field}</p>
+            <p><b>{edu.school}</b></p>
+            <p>{edu.studyLocation}</p>
           </div>
           <div className="secondLine">
-            <p>{edu.studyLocation}</p>
+            <p>{edu.field}</p>
             <p>{convertDate(edu.date)}</p>
           </div>
           <button onClick={() => handleEdit(edu)}>Edit</button>

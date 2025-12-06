@@ -1,0 +1,10 @@
+.firstLine, .secondLine {
+    display: flex;
+    justify-content: space-between;
+}
+
+.firstLine p, .secondLine p {
+    margin: 0;
+    font-style: italic;
+}
+
