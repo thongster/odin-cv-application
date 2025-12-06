@@ -1,4 +1,4 @@
-
+import "../styles/ExperienceDisplay.css"
 
 export default function ExperienceDisplay({
   experienceList,
@@ -19,15 +19,18 @@ export default function ExperienceDisplay({
     <div>
       <h3>Work Experience</h3>
       {experienceList.map((exp) => (
-        <div key={exp.id}>
-          <p>{exp.position}</p>
+        <div key={exp.id} className="expDisplay">
+          <div className="firstLine">
+              <p><b>{exp.position}</b></p>
+              <p>{convertDate(exp.startDate)} - {convertDate(exp.endDate)}</p>
+          </div>
           <p>{exp.company}</p>
           <ul>
             {exp.duties.split("\n").map((duty) => {
               return <li key={crypto.randomUUID()}>{duty}</li>;
             })}
-          </ul>
-          <p>{convertDate(exp.startDate)} - {convertDate(exp.endDate)}</p>          <button onClick={() => handleEdit(exp)}>Edit</button>
+          </ul>      
+          <button onClick={() => handleEdit(exp)}>Edit</button>
         </div>
       ))}
     </div>
