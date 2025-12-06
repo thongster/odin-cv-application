@@ -4,9 +4,11 @@ export default function Education({
   school,
   field,
   date,
+  studyLocation,
   setSchool,
   setField,
   setDate,
+  setStudyLocation,
   setEducationList,
   eduEditId,
   setEduEditId,
@@ -21,6 +23,7 @@ export default function Education({
       school: school,
       field: field,
       date: date,
+      studyLocation: studyLocation
     };
 
     if (eduEditId) {
@@ -63,17 +66,32 @@ export default function Education({
           />
         </div>
         <div>
-          <label htmlFor="field">Field of Study: </label>
+          <label htmlFor="field">Qualification: </label>
           <input
             type="text"
             id="field"
             required
-            placeholder="Computer Science"
+            placeholder="Bachelor's Computer Science"
             value={eduEditId ? eduEdit.field : field}
             onChange={(e) =>
               eduEditId
                 ? setEduEdit((prev) => ({ ...prev, field: e.target.value }))
                 : setField(e.target.value)
+            }
+          />
+        </div>
+        <div>
+          <label htmlFor="studyLocation">Location: </label>
+          <input
+            type="text"
+            id="studyLocation"
+            required
+            placeholder="Cambridge, MA"
+            value={eduEditId ? eduEdit.studyLocation : studyLocation}
+            onChange={(e) =>
+              eduEditId
+                ? setEduEdit((prev) => ({ ...prev, studyLocation: e.target.value }))
+                : setStudyLocation(e.target.value)
             }
           />
         </div>
