@@ -98,7 +98,7 @@ export default function Experience({
         <div>
           <label htmlFor="startDate">Start Date: </label>
           <input
-            type="date"
+            type="month"
             id="startDate"
             required
             value={expEditId ? expEdit.startDate : startDate}
@@ -112,7 +112,7 @@ export default function Experience({
         <div>
           <label htmlFor="endDate">End Date: </label>
           <input
-            type="date"
+            type="month"
             id="endDate"
             required
             value={expEditId ? expEdit.endDate : endDate}

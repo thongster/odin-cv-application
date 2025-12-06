@@ -1,3 +1,5 @@
+
+
 export default function ExperienceDisplay({
   experienceList,
   setTab,
@@ -8,6 +10,10 @@ export default function ExperienceDisplay({
     setExpEditId(exp.id);
     setExpEdit(exp);
     setTab("Experience");
+  }
+  function convertDate(raw) {
+    const date = new Date(raw + "-01");
+    return date.toLocaleString("en-US", { month: "long", year: "numeric" });
   }
   return (
     <div>
@@ -21,9 +27,7 @@ export default function ExperienceDisplay({
               return <li key={crypto.randomUUID()}>{duty}</li>;
             })}
           </ul>
-          <p>{exp.startDate}</p>
-          <p>{exp.endDate}</p>
-          <button onClick={() => handleEdit(exp)}>Edit</button>
+          <p>{convertDate(exp.startDate)} - {convertDate(exp.endDate)}</p>          <button onClick={() => handleEdit(exp)}>Edit</button>
         </div>
       ))}
     </div>
