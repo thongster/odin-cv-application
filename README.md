@@ -2,7 +2,7 @@
 
 Project: CV Application from The Odin Project's React Course
 
-Link to deployed project: [https://odin-cv-application-gules.vercel.app/](https://odin-cv-application-gules.vercel.app/)
+Link to deployed project: https://thongster-odin-cv-application.vercel.app/
 
 Wow! This is my first ever time working with React.
 
